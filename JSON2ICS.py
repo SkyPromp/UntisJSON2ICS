@@ -6,7 +6,8 @@ from time import localtime
 def getEvents(input_json_file):
     with open(input_json_file) as f:
         d = json.loads(f.read())
-        data = d["data"]["result"]["data"]["elementPeriods"]["44208"]
+        data = d["data"]["result"]["data"]
+        data = data["elementPeriods"][str(data["elementIds"][0])]
         periodids = []
         rooster = []
         for el in data:
