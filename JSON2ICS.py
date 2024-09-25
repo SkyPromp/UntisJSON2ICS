@@ -1,6 +1,6 @@
 import json
-from uuid import uuid4
 from time import localtime
+from uuid import uuid4
 
 
 def getEvents(input_json_file):
